@@ -1,15 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+export const state = () => ({
+  sidebar: false
+})
 
-import tasks from './tasks'
-import user from './user'
-
-Vue.use(Vuex)
-
-export function createStore () {
-  return new Vuex.Store({
-    modules: {
-      tasks, user
-    }
-  })
+export const mutations = {
+  toggleSidebar (state) {
+    state.sidebar = !state.sidebar
+  }
 }
